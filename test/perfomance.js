@@ -46,13 +46,13 @@ const data = [
 	[10, 100],
 	[100, 150],
 	[1000, 1500],
-	[2000, 3000],
-	[10, 12000, 1000],
-	[1200, 12000, 10]
+	// [2000, 3000],
+	// [10, 12000, 1000],
+	// [1200, 12000, 10]
 ];
 
 describe('Perfomance test', function () {
-	this.timeout(IS_CI ? 10000 * 100 : 20000);
+	this.timeout(IS_CI ? 10000 * 50 : 20000);
 
 	data.forEach(value => {
 		it(`Should create an assembly from ${value[0]} files${value[2] ? ' ' + value[2] + ' times' : ''} of less than ${value[1]} ms`, () => {
